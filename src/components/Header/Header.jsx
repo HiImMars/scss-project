@@ -1,17 +1,25 @@
+/* eslint-disable react/prop-types */
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosSearch } from "react-icons/io";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
-const Header = () => {
+const Header = ({ isOpenBurger, setIsOpenBurger, isLarge }) => {
   return (
     <header className="header">
       {/* Burger menu */}
-      <button className="menu-btn" type="button">
-        <RxHamburgerMenu className="menu-btn-icon" width="24" height="24" />
-        Overview
-      </button>
+      {!isLarge && !isOpenBurger && (
+        <button
+          className="menu-btn"
+          type="button"
+          onClick={() => setIsOpenBurger(true)}
+        >
+          <RxHamburgerMenu className="menu-btn-icon" />
+          Overview
+        </button>
+      )}
+
       <label className="search-field">
-        <IoIosSearch className="search-icon" width="20" height="20" />
+        <IoIosSearch className="search-icon" />
         <input
           type="search"
           className="search-input"
@@ -20,11 +28,7 @@ const Header = () => {
         />
       </label>
       <button className="message-btn">
-        <IoMdNotificationsOutline
-          className="message-icon"
-          width="20"
-          height="20"
-        />
+        <IoMdNotificationsOutline className="message-icon" />
       </button>
     </header>
   );

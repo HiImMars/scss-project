@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import { IoCloseOutline } from "react-icons/io5";
 import { PiLinuxLogo } from "react-icons/pi";
@@ -7,49 +8,52 @@ import { FaBriefcase } from "react-icons/fa6";
 import { MdOutlineLocalPostOffice } from "react-icons/md";
 import { TbReportAnalytics } from "react-icons/tb";
 
-const Sidebar = () => {
+const Sidebar = ({ setIsOpenBurger, isLarge }) => {
   return (
-    <aside className="sidebar" id="sidebar-menu">
+    <aside className="sidebar is-open" id="sidebar-menu">
       <nav className="menu">
-        <button className="menu-btn" type="button">
-          <IoCloseOutline className="menu-btn-icon" width="20" height="20" />
-        </button>
+        {!isLarge && (
+          <button
+            className="menu-btn"
+            type="button"
+            onClick={() => setIsOpenBurger(false)}
+          >
+            <IoCloseOutline className="menu-btn-icon" />
+          </button>
+        )}
+
         <Link to="/" className="logo">
-          <PiLinuxLogo className="logo-icon" width="24" height="24" />
+          <PiLinuxLogo className="logo-icon" />
           GhostCRM
         </Link>
         <ul className="menu-list">
           <li className="menu-item">
             <Link className="menu-link current">
-              <HiOutlineViewGrid className="menu-icon" width="20" height="20" />
+              <HiOutlineViewGrid className="menu-icon" />
               Overview
             </Link>
           </li>
           <li className="menu-item">
             <Link className="menu-link">
-              <RiContactsFill className="menu-icon" width="20" height="20" />
+              <RiContactsFill className="menu-icon" />
               Contacts
             </Link>
           </li>
           <li className="menu-item">
             <Link className="menu-link">
-              <FaBriefcase className="menu-icon" width="20" height="20" />
+              <FaBriefcase className="menu-icon" />
               Companies
             </Link>
           </li>
           <li className="menu-item">
             <Link className="menu-link">
-              <MdOutlineLocalPostOffice
-                className="menu-icon"
-                width="20"
-                height="20"
-              />
+              <MdOutlineLocalPostOffice className="menu-icon" />
               Messages
             </Link>
           </li>
           <li className="menu-item">
             <Link className="menu-link">
-              <TbReportAnalytics className="menu-icon" width="20" height="20" />
+              <TbReportAnalytics className="menu-icon" />
               Report
             </Link>
           </li>

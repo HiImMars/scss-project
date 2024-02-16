@@ -1,11 +1,3 @@
-// @font-face {
-//   font-family: "Montserrat";
-//   src: url("../fonts/Montserrat-Bold.ttf") format("ttf"),
-//     url("../fonts/Montserrat-Medium.ttf") format("ttf"),
-//     url("../fonts/Montserrat-Regular.ttf") format("ttf"),
-//     url("../fonts/Montserrat-SemiBold.ttf") format("ttf");
-// }
-
-// @use "./utils/functions";
-
 @use "base";
+@use "layout";
+@use "components";
