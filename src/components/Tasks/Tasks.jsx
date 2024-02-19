@@ -43,7 +43,7 @@ const Tasks = () => {
   return (
     <section className="tasks">
       <h2 className="tasks-title">
-        <span>Tasks (5)</span>| Today
+        <span>Tasks (5)</span> | Today
       </h2>
       <ul className="tasks-list">
         {tasks.map(({ title, desc, time }) => (

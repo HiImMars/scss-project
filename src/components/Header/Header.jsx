@@ -27,8 +27,8 @@ const Header = ({ isOpenBurger, setIsOpenBurger, isLarge }) => {
           placeholder="Search something..."
         />
       </label>
-      <button className="message-btn">
-        <IoMdNotificationsOutline className="message-icon" />
+      <button className="notification-btn">
+        <IoMdNotificationsOutline className="notification-icon" />
       </button>
     </header>
   );
