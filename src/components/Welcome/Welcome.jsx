@@ -4,10 +4,8 @@ const Welcome = () => {
   return (
     <section className="welcome">
       <h1 className="page-title">
-        Hello User,{" "}
-        <span className="page-title-accent">
-          Welcome into GhostCRM Dashboard
-        </span>
+        <span className="page-title-accent">Hello User,</span>
+        Welcome into GhostCRM Dashboard
       </h1>
       <button className="welcome-btn btn btn--primary" type="button">
         <GoPlus className="welcome-btn-icon btn-icon" />
